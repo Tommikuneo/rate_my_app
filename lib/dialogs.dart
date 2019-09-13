@@ -44,7 +44,9 @@ class RateMyAppDialog extends StatelessWidget {
           ),
         ),
         actions: [
-          Wrap(
+          ConstrainedBox(
+            constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.7),
+            child: Wrap(
             alignment: WrapAlignment.end,
             children: [
               FlatButton(
@@ -75,6 +77,7 @@ class RateMyAppDialog extends StatelessWidget {
                 },
               ),
             ],
+          ),
           ),
         ],
       );
